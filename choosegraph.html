@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>senseitvisuallycharts-Choose Graph-Drag and Drop to upload file</title>
+	<meta name="description" content="Sense it visually provides a variety of charts for Visualization. After uploading a file and clicking on choose and chart users are redirected to this page. Users are given options of multiple charts out of which any one can be selected by users just by clicking on them.">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-translate-customization" content="c52bc01879739c49-ed3696cfca641eac-gbbb8609bf3bfac62-22"></meta>	
+	<meta name="author" content="Gaurangi Bhangale">
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link href="assets/css/shop-homepage.css" rel="stylesheet">
+	
+
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="assets/css/main.css">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+	$(document).on('click', '.c ', function () {
+		console.log("checkbox checked");
+		if ($(this).is(':checked')){
+			console.log("inside if");
+			$("#createChart").removeAttr("disabled");	    						
+		}else{
+			console.log("inside else");
+			$('#createChart').attr('disabled', 'disabled');	        					
+		}
+		
+	});
+	});
+
+	</script>
+	<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', gaTrack: true, gaId: 'UA-57417871-1'}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body>
+	<!-- Fixed navbar -->	
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="Progressus HTML5 template"></a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<!--<li class="active"><a class="btn" href="signin.html">SIGN IN / SIGN UP</a></li>-->
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div> 
+	<!-- /.navbar -->
+
+	<header id="head" class="secondary"></header>
+
+	<!-- container -->
+	<div class="container">
+		<div id="google_translate_element"></div>
+		<ol class="breadcrumb">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="upload.html">Upload Data</a></li>
+			<li class="active">Choose a Graph</li>
+		</ol>
+
+		<!--modal for choosing attributes-->
+		<!--<div class="modal fade" id="chart1" style="display: none;">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header"> <span><h2  id="title" align="center">Bar Chart</h2></span> 
+	            </div>
+	            <div class="modal-body">
+	                <div class="container"></div>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" style="align:center" class="btn btn-default" data-dismiss="modal">Close</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+	<div class="modal fade" id="chart2" style="display: none;">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header"> <span><h2  id="title" align="center">Pie Chart</h2></span> 
+	            </div>
+	            <div class="modal-body">
+	                <div class="container"></div>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" style="align:center" class="btn btn-default" data-dismiss="modal">Close</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+	<div class="modal fade" id="chart3" style="display: none;">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header"> <span><h2  id="title" align="center">Bubble Chart</h2></span> 
+	            </div>
+	            <div class="modal-body">
+	                <div class="container"></div>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" style="align:center" class="btn btn-default" data-dismiss="modal">Close</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+	<div class="modal fade" id="chart4" style="display: none;">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header"> <span><h2  id="title" align="center">Area Chart</h2></span> 
+	            </div>
+	            <div class="modal-body">
+	                <div class="container"></div>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" style="align:center" class="btn btn-default" data-dismiss="modal">Close</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>-->
+	
+	<div class="modal fade" id="modal" style="display: none;">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header"><span><h2  id="title" align="center">Choose Attributes:</h2></span> 
+	            </div>
+	            <div class="modal-body">	                
+					<div class="row" id="attributeList">         
+					</div>					
+	            </div>
+	            <div class="modal-footer">
+					<button id="createChart" style="align:center" class="btn btn-default" type="button" disabled onclick="createChart();">Generate Chart</button>
+	                <button type="button" style="align:center" class="btn btn-default" data-dismiss="modal">Close</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+
+
+
+	<article class="col-xs-12 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Choose Graph</h1>
+				</header>
+		
+					<div class="row">
+                       
+                        <p></p>
+
+                    <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img  src="assets/images/barchart.jpg" id="img" alt="Bar Chart" class="img img-responsive full-width" data-toggle="modal" data-charttype="barchart" onclick='attributeList("BarChart");'>
+                            <div class="caption">
+                                <h4><a href="#" onclick='attributeList("BarChart");'>Bar Chart</a></h4>
+                                <p style="font-family:calibri;">Bar chart or bar graph is a chart with rectangular bars with lengths proportional to the values that they represent</p>
+                            </div>
+                        </div>
+                    </div>
+					<div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img  src="assets/images/scatterchart.png" id="img" alt="Scatter Plot" class="img img-responsive full-width" data-toggle="modal" data-charttype="ScatterPlot" onclick='attributeList("ScatterPlot");'>
+                            <div class="caption">
+                                <h4><a href="#" onclick='attributeList("ScatterPlot");'>Scatter Plot</a></h4>
+                                <p style="font-family:calibri;">Scatter chart is a chart that displays data as a collection of points and shoes how much one variable is affected by another.</p>
+                            </div>
+                        </div>
+                    </div>
+					<div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img  src="assets/images/steppedArea.png" id="img" alt="Stepped Area Chart" class="img img-responsive full-width" data-toggle="modal" data-charttype="SteppedAreaChart" onclick='attributeList("SteppedAreaChart");'>
+                            <div class="caption">
+                                <h4><a href="#" onclick='attributeList("SteppedAreaChart");'>Stepped Area Chart</a></h4>
+                                <p style="font-family:calibri;">Step Area Charts are like line charts except that the area under them is shaded. It can be used to highlight the variation of values over time.</p>
+                            </div>
+                        </div>
+                    </div>
+					<div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img  src="assets/images/lineInterval.png" id="img" alt="Line Chart" class="img img-responsive full-width" data-toggle="modal" data-charttype="LineChart" onclick='attributeList("LineChart");'>
+                            <div class="caption">
+                                <h4><a href="#" onclick='attributeList("LineChart");'>Line Interval Chart</a></h4>
+                                <p style="font-family:calibri;">Line intervals are used to depict the variance of multiple experiments and shows how a particular data changes at equal intervals of time.</p>
+                            </div>
+                        </div>
+                    </div>
+					<!--
+                    <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img src="assets/images/piechart2.png" id="img1" alt="" class="img img-responsive full-width"  data-toggle="modal" data-charttype="piechart" onclick='attributeList("PieChart");'>
+                            <div class="caption">
+                                <h4><a href="#" onclick='attributeList("BarChart");'>Pie Chart</a></h4>
+                                	<p>A pie chart is divided into sectors, illustrating numerical proportion which is proportional to the quantity it represents</p>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+					-->
+					<div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img  src="assets/images/histogram.png" id="img" alt="Histogram" class="img img-responsive full-width" data-toggle="modal" data-charttype="Histogram" onclick='attributeList("Histogram");'>
+                            <div class="caption">
+                                <h4><a href="#" onclick='attributeList("Histogram");'>Histogram</a></h4>
+                                <p style="font-family:calibri;">Histogram represents a frequency distribution by means of rectangles whose areas are proportional to the corresponding frequencies.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img src="assets/images/bubblechart.png" id="img2" alt="Bubble Chart"class="img img-responsive full-width" data-charttype="bubblechart" data-toggle="modal" onclick='attributeList("BubbleChart");'>
+                            <div class="caption">
+                                <h4><a href="#" onclick='attributeList("BubbleChart");'>Bubble Chart</a></h4>
+                                <p style="font-family:calibri;">Bubble chart is a chart that displays three dimensions of data. An additional dimension of the data is represented in the size of the bubbles</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img src="assets/images/areaChart.png" alt="Area Chart" id="img3" class="img img-responsive full-width" data-toggle="modal" data-charttype="areachart" onclick='attributeList("AreaChart");'>
+                            <div class="caption">
+                                <h4><a href="#" onclick='attributeList("AreaChart");'>Area Chart</a>
+                                </h4>
+                                <p style="font-family:calibri;">Area charts are much like line charts, but they display different colours in the areas below the lines. The colourful and visual display distinguishes the data more clearly.</p>
+                            </div>
+                        </div>
+                    </div>
+					
+					<div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img  src="assets/images/ComboChart.png" id="img" alt="Combo Chart" class="img img-responsive full-width" data-toggle="modal" data-charttype="ComboChart" onclick='attributeList("ComboChart");'>
+                            <div class="caption">
+                                <h4><a href="#" onclick='attributeList("ComboChart");'>Combo Chart</a></h4>
+                                <p style="font-family:calibri;">Combo chart lets user display each data series as a different marker type, such as column, line, or area line.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img src="assets/images/barchart.jpg" alt="">
+                            <div class="caption">
+                                <h4><a href="#">Bar Chart</a></h4>
+                                <p>A bar chart or bar graph is a chart with rectangular bars with lengths proportional to the values that they represent</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img src="assets/images/piechart2.png" alt="">
+                            <div class="caption">
+                                <h4><a href="#">Pie Chart</a></h4>
+                                	<p>A pie chart is divided into sectors, illustrating numerical proportion which is proportional to the quantity it represents</p>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img src="assets/images/bubblechart.png" alt="">
+                            <div class="caption">
+                                <h4><a href="#">Bubble Chart</a></h4>
+                                <p>A bubble chart is a type of chart that displays three dimensions of data</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img src="assets/images/barchart.jpg" alt="">
+                            <div class="caption">
+                                <h4><a href="#">Bar Chart</a>
+                                </h4>
+                                <p>A bar chart or bar graph is a chart with rectangular bars with lengths proportional to the values that they represent</p>
+                            </div>
+                        </div>
+                    </div>-->
+
+                    
+                </div>
+	</div>	<!-- /container -->
+	</article>
+
+	<footer id="footer" class="top-space">
+
+		<div class="footer1">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">Contact</h3>
+						<div class="widget-body">
+							<p>+(408) 924-1000<br>
+								<a href="mailto:#">immpecables@gmail.com</a><br>
+								<br>
+								
+							</p>	
+						</div>
+					</div>
+
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">Follow me</h3>
+						<div class="widget-body">
+							<p class="follow-me-icons">
+								<a href="https://twitter.com/login"><i class="fa fa-twitter fa-2"></i></a>
+								<a href="https://github.com/"><i class="fa fa-github fa-2"></i></a>
+								<a href="https://www.facebook.com/"><i class="fa fa-facebook fa-2"></i></a>
+							</p>	
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<h3 class="widget-title">Address</h3>
+						<div class="widget-body">
+							<p> 1 Washington Sq</p>
+							<p>San Jose, CA 95192</p>
+							<p></p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="simplenav">
+								<a href="index.html">Home</a> | 
+								<a href="about.html">About</a> |
+								<a href="contact.html">Contact</a> 
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="text-right">
+								Copyright &copy; 2014, The Impeccables. Designed by Impeccables team 
+							</p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+	</footer>	
+		
+
+
+
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="assets/js/headroom.min.js"></script>
+	<script src="assets/js/jQuery.headroom.min.js"></script>
+	<script src="assets/js/template.js"></script>
+	<script src="assets/js/myscript.js"></script>
+	
+	<script src="http://www.localeplanet.com/api/auto/icu.js"></script>
+	<script src="http://www.localeplanet.com/api/translate.js"></script>
+	
+	<!--Google Analytics Tracking Code-->
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57417871-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	
+
+</body>
+</body>
+</html>
